@@ -137,3 +137,47 @@ Usage Example:
     }
 
 <br>
+
+## Usage
+<ol>
+<li> 
+
+Clone this repo: `git clone https://github.com/gfortil/terraform-azurerm-hpcc-aks.git`. </li>
+
+<li>Linux and MacOS</li>
+<ol>
+<li> 
+
+Change directory to terraform-azurerm-hpcc-aks: `cd terraform-azurerm-hpcc-aks` </li>
+<li> 
+
+Copy examples/admin.tfvars to terraform-azurerm-hpcc-aks: `cp examples/admin.tfvars` </li>
+</ol>
+<li>Windows OS</li>
+<ol>
+<li> 
+    
+Change directory to terraform-azurerm-hpcc-aks: `cd terraform-azurerm-hpcc-aks` </li>
+<li> 
+
+Copy examples/admin.tfvars to terraform-azurerm-hpcc-aks: `copy examples/admin.tfvars` </li>
+</ol>
+<li> 
+
+Open `terraform-azurerm-hpcc-aks/admin.tfvars` file. </li>
+<li> 
+
+Set attributes to your preferred values. </li>
+<li> 
+
+Save `terraform-azurerm-hpcc-aks/admin.tfvars` file. </li>
+<li> 
+
+Run `terraform init`. This step is only required before your first `terraform apply`. </li>
+<li> 
+
+Run `terraform apply -var-file=admin.tfvars` or `terraform apply -var-file=admin.tfvars -auto-approve`. </li>
+<li> 
+
+Type `yes` if you didn't pass the flag `-auto-approve`. </li>
+</ol>
