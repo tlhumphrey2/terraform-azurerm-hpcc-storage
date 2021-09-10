@@ -142,35 +142,35 @@ Usage Example:
 <ol>
 <li> 
 
-Clone this repo: `git clone https://github.com/gfortil/terraform-azurerm-hpcc-aks.git`. </li>
+Clone this repo: `git clone https://github.com/gfortil/terraform-azurerm-hpcc-storage.git`. </li>
 
 <li>Linux and MacOS</li>
 <ol>
 <li> 
 
-Change directory to terraform-azurerm-hpcc-aks: `cd terraform-azurerm-hpcc-aks` </li>
+Change directory to terraform-azurerm-hpcc-storage: `cd terraform-azurerm-hpcc-storage` </li>
 <li> 
 
-Copy examples/admin.tfvars to terraform-azurerm-hpcc-aks: `cp examples/admin.tfvars` </li>
+Copy examples/admin.tfvars to terraform-azurerm-hpcc-storage: `cp examples/admin.tfvars` </li>
 </ol>
 <li>Windows OS</li>
 <ol>
 <li> 
     
-Change directory to terraform-azurerm-hpcc-aks: `cd terraform-azurerm-hpcc-aks` </li>
+Change directory to terraform-azurerm-hpcc-storage: `cd terraform-azurerm-hpcc-storage` </li>
 <li> 
 
-Copy examples/admin.tfvars to terraform-azurerm-hpcc-aks: `copy examples/admin.tfvars` </li>
+Copy examples/admin.tfvars to terraform-azurerm-hpcc-storage: `copy examples/admin.tfvars` </li>
 </ol>
 <li> 
 
-Open `terraform-azurerm-hpcc-aks/admin.tfvars` file. </li>
+Open `terraform-azurerm-hpcc-storage/admin.tfvars` file. </li>
 <li> 
 
 Set attributes to your preferred values. </li>
 <li> 
 
-Save `terraform-azurerm-hpcc-aks/admin.tfvars` file. </li>
+Save `terraform-azurerm-hpcc-storage/admin.tfvars` file. </li>
 <li> 
 
 Run `terraform init`. This step is only required before your first `terraform apply`. </li>
