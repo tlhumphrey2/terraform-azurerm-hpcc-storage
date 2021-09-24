@@ -5,7 +5,7 @@ admin = {
 
 metadata = {
   project             = "hpccdemo"
-  product_name        = "sa"
+  product_name        = "storage_account"
   business_unit       = "commercial"
   environment         = "sandbox"
   market              = "us"
@@ -19,7 +19,7 @@ tags = { "justification" = "testing" }
 
 resource_group = {
   unique_name = true
-  location    = "canadacentral"
+  location    = "eastus2"
 }
 
 storage = {
@@ -29,11 +29,11 @@ storage = {
   account_replication_type = "LRS"
 
   quotas = {
-    dali  = 3
-    data  = 2
-    dll   = 2
-    lz    = 2
-    sasha = 5
+    dali  = 1
+    data  = 3
+    dll   = 1
+    lz    = 1
+    sasha = 3
   }
 }
 
