@@ -5,7 +5,7 @@ admin = {
 
 metadata = {
   project             = "hpccdemo"
-  product_name        = "storage_account"
+  product_name        = "storageaccount"
   business_unit       = "commercial"
   environment         = "sandbox"
   market              = "us"
@@ -37,4 +37,4 @@ storage = {
   }
 }
 
-# disable_naming_conventions = false # true will enforce all metadata inputs below
+# disable_naming_conventions = false # true will enforce all the arguments of the metadata block above
