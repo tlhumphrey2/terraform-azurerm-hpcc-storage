@@ -54,15 +54,10 @@ variable "metadata" {
   }
 }
 
-variable "virtual_network" {
+variable "subnet_ids" {
   description = "Subnet IDs"
-  type = object({
-    name                = string
-    resource_group_name = string
-    location            = string
-    subnet_ids          = map(string)
-  })
-  default = null
+  type        = list(string)
+  default     = null
 }
 
 variable "storage_accounts" {
