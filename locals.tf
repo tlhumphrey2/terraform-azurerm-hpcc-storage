@@ -14,7 +14,7 @@ locals {
 
   tags = merge(var.metadata.additional_tags, { "owner" = var.owner.name, "owner_email" = var.owner.email })
 
-  location = var.virtual_network.location
+  location = var.metadata.location
 
   resource_groups = {
     storage_accounts = {
@@ -22,9 +22,9 @@ locals {
     }
   }
 
-  subnet_ids = {
-    for k, v in var.virtual_network.subnet_ids : k => "/subscriptions/${data.azurerm_client_config.current.subscription_id}/resourceGroups/${var.virtual_network.resource_group_name}/providers/Microsoft.Network/virtualNetworks/${var.virtual_network.name}/subnets/${v}"
-  }
+  # subnet_ids = merge({
+  #   for k, v in var.virtual_network.subnet_ids : k => "/subscriptions/${data.azurerm_client_config.current.subscription_id}/resourceGroups/${var.virtual_network.resource_group_name}/providers/Microsoft.Network/virtualNetworks/${var.virtual_network.name}/subnets/${v}"
+  # }, var.virtual_network.subnet_ids)
 
   azure_files_pv_protocol = "nfs"
 
@@ -46,7 +46,7 @@ locals {
         "account_tier" : "${v.account_tier}"
         "replication_type" : "${v.replication_type}"
         "authorized_ip_ranges" : "${merge(v.authorized_ip_ranges, { host_ip = data.http.host_ip.response_body })}"
-        "subnet_ids" : "${v.subnet_ids}"
+        "subnet_ids" : "${var.subnet_ids}"
         "file_share_retention_days" : v.storage_type == "azurefiles" ? "${v.file_share_retention_days}" : null
         "prefix_name" : "${v.prefix_name}"
       }
